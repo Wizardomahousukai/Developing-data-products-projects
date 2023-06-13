@@ -1,0 +1,24 @@
+---
+title: "Untitled"
+author: "Joel Seah"
+date: "2023-06-13"
+output: html_document
+---
+//Install and load the packages needed
+
+install.packages("magrittr") # package installations are only needed the first time you use it
+install.packages("dplyr")    # alternative installation of the %>%
+library(magrittr) # needs to be run every time you start R and want to use %>%
+library(dplyr)    # alternatively, this also loads %>%
+
+install.packages("leaflet")
+library(leaflet)
+
+// Display the Location of Singapore Poly
+
+SPlocation <- leaflet() %>%
+  addTiles() %>%  
+  addMarkers(lng=103.7775, lat=1.3098, popup="This is Singapore Poly")
+SPlocation
+
+
